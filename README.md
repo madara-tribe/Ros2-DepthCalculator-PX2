@@ -14,6 +14,18 @@ through least squares fitting repository, be able to convert predicted depth val
 
 
 # How to use
+- put the training image into the data folder
+- run inference.cpp to estimate relative distance
+- record these data to csv file and it is save to data folder automatically.
+
+
+## Method: Calculating Real-World Distance from Image Edge to Object Center
+
+This method estimates the real-world horizontal distance between the left edge of an image and the center of a detected object, using bounding box data and a known pixel-to-centimeter ratio.
+- The input is a 2D image 
+- An object has been detected with a bounding box: (x, y, w, h) 
+- by letting real-world distance correspond to 1 pixel in the horizontal axis, you get pixel_to_cm_ratio (in cm/pixel). This may be computed from prior calibration or depth-based fitting.
+
 
 
 

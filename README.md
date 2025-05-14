@@ -25,7 +25,17 @@ This method estimates the real-world horizontal distance between the left edge o
 - The input is a 2D image 
 - An object has been detected with a bounding box: (x, y, w, h) 
 - by letting real-world distance correspond to 1 pixel in the horizontal axis, you get pixel_to_cm_ratio (in cm/pixel). This may be computed from prior calibration or depth-based fitting.
-
+```
+double pixel_ratio = 0.171837;       // Real-world units per pixel
+double calculateRealCoordinate(double x, double w, int image_width) {
+    // Compute pixel offset from image center
+    double x_center = x + w / 2.0;
+    double x_coordinate = x_center // + static_cast<double>(x_ori);
+    // Convert to real-world distance using pixel-to-meter (or cm) ratio
+    double x_real_coord = x_coordinate * pixel_ratio;
+    return x_real_coord;
+}
+```
 
 
 

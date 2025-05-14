@@ -19,7 +19,7 @@ through least squares fitting repository, be able to convert predicted depth val
 - record these data to csv file and it is save to data folder automatically.
 
 
-## Method: Calculating Real-World Distance from Image Edge to Object Center
+## Additional Method: Calculating Real-World Distance from Image Edge to BBox Center
 
 This method estimates the real-world horizontal distance between the left edge of an image and the center of a detected object, using bounding box data and a known pixel-to-centimeter ratio.
 - The input is a 2D image 

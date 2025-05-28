@@ -26,14 +26,6 @@ This method estimates the real-world horizontal distance between the left edge o
 - An object has been detected with a bounding box: (x, y, w, h) 
 - by letting real-world distance correspond to 1 pixel in the horizontal axis, you get pixel_to_cm_ratio (in cm/pixel). This may be computed from prior calibration or depth-based fitting.
 
-## formula to get angle
-
-when z change from 0 to 100, you can get angle θ（degree）
-
-$$
-\theta(z) = \arccos \left( \frac{-50(z-50) + 8100}{\sqrt{10600} \times \sqrt{(z-50)^2 + 8100}} \right) \times \frac{180}{\pi}
-$$
-
 ```c++
 double pixel_ratio = 0.171837;       // Real-world units per pixel
 double calculateRealCoordinate(double x, double w, int image_width) {

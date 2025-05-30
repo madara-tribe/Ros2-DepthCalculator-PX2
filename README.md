@@ -3,12 +3,12 @@ This repository provides a pipeline to estimate the absolute distance from a sin
 - MiDaS for monocular depth estimation
 - YOLOv7 for real-time object detection
 
-## predict relative distance phase
+## phase1: predict relative distance
 the relevant distance of an object is calculated by the median estimated distance of all pixels inside the bounded
 box.
 ![Image](https://github.com/user-attachments/assets/1e33c8b5-7fd3-47d6-ab27-3dbab618515e)
 
-## convert predicted depth to absolute distance phase
+## phase2 : convert predicted depth to absolute distance
 through [least squares fitting repository](https://github.com/madara-tribe/least_squares_estimator), be able to convert predicted depth values into real-world absolute distances.
 ![Image](https://github.com/user-attachments/assets/091e6707-24b9-4342-ba62-cfdce6342772)
 
@@ -17,7 +17,7 @@ through [least squares fitting repository](https://github.com/madara-tribe/least
 - put the training image into the data folder
 - run inference.cpp to estimate relative distance
 - record these data to csv file and it is save to data folder automatically.
-
+- through [least squares fitting repository](https://github.com/madara-tribe/least_squares_estimator), calcurate absolute distance formula 
 
 ## Additional Method: Calculating Real-World Distance from Image Edge to BBox Center
 
